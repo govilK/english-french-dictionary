@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DictionaryBase</title>
+    <link href="s40-theme/css/s40-theme.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="s40-theme/js/screensize.js"></script>
+    <script language="javascript" type="text/javascript" src="s40-theme/js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="s40-theme/js/app.js"></script>
+    <script language="javascript" type="text/javascript" src="s40-theme/js/config.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="s40-theme/css/s40-theme_labeled_title.css" />
+    <link rel="stylesheet" type="text/css" href="s40-theme/css/s40-theme_text_field.css" />
+    <link rel="stylesheet" type="text/css" href="s40-theme/css/s40-theme_button.css" />	
+
+</head>
+
+<body>
+    <div class="ui-page">
+        <!-- header -->
+        <div class="ui-header">
+             <div class="ui-title inline"><h2>DICTIONARY</h2></div><div class="refresh-icon inline"><a onclick="refreshPageContent();"><img alt="icon" src="s40-theme/images/refresh_40x40.png"/></a></div>
+        </div>
+
+        <div class="ui-content">
+ 			<!-- text-field -->
+			<div class="ui-fieldset_S40textfield">
+			   <input id="word-input" type="text" name="name" class="ui-text-input_S40textfield"/>
+			</div>
+
+			<div id="submit-button-wrapper">
+				<button id="submit" name="submit" class="ui-button_S40button" onclick="getMeaning()">Translate</button>
+			</div>
+
+			<!-- Languages info -->
+			<div id="word-conversion-wrapper">
+				<p id="word-meaning-text">
+					<span id="language-from"></span>
+					<span> - </span>
+					<span id="language-to"></span>
+				</p>
+			</div>
+
+			<div id="loading" align="center">
+				<p>Loading...</p>
+				<img src="loading.gif" alt="Loading..."/>
+			</div>
+
+			<!-- Result -->
+			<div id="word-meaning-wrapper">
+				<p id="word-meaning">Hola</p>
+			</div>
+
+			<div id="no-result">
+				<p>Sorry, the meaning of the word you entered was not found.</p>
+				<br></br>
+				<p>Please try a different word.</p>
+			</div>
+		</div>
+    </div>    
+</body>
+</html>
